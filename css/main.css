@@ -3,13 +3,19 @@
 }
 
 .navbar{
-    background-color: #d49e77;
+    background-color: #1FA67A;
 }
 
+#koleksi{
+    background-color: #1FA67A;
+}
 body{
     font-family: 'Inter', sans-serif;
 }
 
+footer{
+    background-color: #313233;
+}
 /* #carouselExampleCaptions img{ 
     max-height: 1000px;
 } */
