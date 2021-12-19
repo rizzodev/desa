@@ -1,48 +1,144 @@
-.jumbotron{
+.jumbotron {
     padding: 5rem 1rem;
 }
 
-.navbar{
+.navbar {
     background-color: #1FA67A;
 }
 
-#koleksi{
+#koleksi {
     background-color: #1FA67A;
 }
-body{
+
+body {
     font-family: 'Inter', sans-serif;
 }
 
-footer{
-    background-color: #313233;
+
+/* FOOTER */
+
+.footer {
+    padding-top: 1rem;
+    background-color: #151414;
 }
+
+
+/* STYLE THE CONTACT-BOX CONTENT  */
+
+.contact-box {
+    position: relative;
+}
+
+.contact-box .icon {
+    width: 2rem;
+    stroke: #1FA67A;
+    padding-top: 0.5rem;
+}
+
+.contact-box .info {
+    padding: 0.4rem;
+    font-weight: 600;
+    &--subtitle {
+        font-size: 0.8rem;
+        color: $gray-600;
+        text-decoration: none;
+        @include media-breakpoint-up(sm) {
+            font-size: 1rem;
+        }
+    }
+}
+
+.contact-box .info .title {
+    color: white;
+    text-doration: none;
+    font-size: 1rem;
+    font-size: 1.4rem;
+}
+
+
+/* STYLE THE SOCIAL MEDIA CONTENT  */
+
+.footer-sm a {
+    color: white;
+}
+
+.footer-sm a i {
+    font-size: 1rem;
+    margin-left: 1rem;
+    font-size: 1.6rem;
+}
+
+.footer-sm a i:hover {
+    color: #1FA67A;
+}
+
+
 /* #carouselExampleCaptions img{ 
     max-height: 1000px;
 } */
 
+.btn-rounded {
+    position: relative;
+    padding: 0.8375rem 4.375rem 0.8375rem 1.25rem;
+    font-weight: 700;
+    margin: 0;
+    border: 0.1rem solid white;
+    background-color: white;
+    display: block;
+}
+
+.btn-rounded:hover {
+    background-color: #1FA67A;
+}
+
+#phone span {
+    position: absolute;
+    background-color: #1FA67A;
+    width: 2.5rem;
+    height: 2.5rem;
+    top: 64%;
+    right: 5px;
+    transform: translateY(-65%);
+    border-radius: 50%;
+}
+
+#phone span i {
+    color: rgb(255, 255, 255);
+    font-size: 1rem;
+    line-height: 2.5rem;
+}
+
+
 /* Desktop */
-@media (min-width: 992px){
-    .nav-link{
+
+@media (min-width: 992px) {
+    .nav-link {
         text-transform: uppercase;
         margin-right: 30px;
     }
-
-    .nav-link:hover::after{
+    .nav-link:hover::after {
         content: '';
         display: block;
-        border-bottom: 3px solid #000000;
+        border-bottom: 3px solid #ffffff;
         width: 50%;
         margin: auto;
         padding-bottom: 5px;
         margin-bottom: -8px;
     }
-
+    .contact-box .icon {
+        width: 4rem;
+    }
+    .contact-box .info .title {
+        font-size: 1.4rem;
+    }
 }
 
+
 /* Phone */
-@media (max-width: 576px) { 
-    #carouselExampleCaptions img{ 
+
+@media (max-width: 576px) {
+    #carouselExampleCaptions img {
         /* width: auto; */
         height: 350px;
     }
- }
+}
