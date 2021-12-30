@@ -1,13 +1,21 @@
+/* Animation smooth*/
+
+:root {
+    --primary: #1FA67A;
+    --footer: #151414;
+    --white: white;
+}
+
 .jumbotron {
     padding: 5rem 1rem;
 }
 
 .navbar {
-    background-color: #1FA67A;
+    background-color: var(--primary);
 }
 
 #koleksi {
-    background-color: #1FA67A;
+    background-color: var(--primary);
 }
 
 body {
@@ -19,7 +27,7 @@ body {
 
 .footer {
     padding-top: 1rem;
-    background-color: #151414;
+    background-color: var(--footer);
 }
 
 
@@ -31,26 +39,24 @@ body {
 
 .contact-box .icon {
     width: 2rem;
-    stroke: #1FA67A;
+    stroke: var(--primary);
     padding-top: 0.5rem;
 }
 
 .contact-box .info {
     padding: 0.4rem;
     font-weight: 600;
-    &--subtitle {
-        font-size: 0.8rem;
-        color: $gray-600;
-        text-decoration: none;
-        @include media-breakpoint-up(sm) {
-            font-size: 1rem;
-        }
-    }
+}
+
+.contact-box .info .subtitle {
+    font-size: 0.8rem;
+    color: gray;
+    text-decoration: none;
 }
 
 .contact-box .info .title {
-    color: white;
-    text-doration: none;
+    color: var(--white);
+    text-decoration: none;
     font-size: 1rem;
     font-size: 1.4rem;
 }
@@ -59,7 +65,7 @@ body {
 /* STYLE THE SOCIAL MEDIA CONTENT  */
 
 .footer-sm a {
-    color: white;
+    color: var(--white);
 }
 
 .footer-sm a i {
@@ -69,7 +75,52 @@ body {
 }
 
 .footer-sm a i:hover {
-    color: #1FA67A;
+    color: var(--primary);
+}
+
+
+/* STYLE THE CAMPANY INFO CONTENT  */
+
+.campany-list {
+    display: block;
+    list-style-type: none;
+    position: relative;
+}
+
+.campany-list li {
+    margin-bottom: 0.5rem;
+    text-decoration: none;
+}
+
+.campany-list li a {
+    color: white;
+    text-decoration: none;
+}
+
+.campany-list li a:hover {
+    color: var(--primary);
+}
+
+
+/* STYLE THE COPYRIGHT  CONTENT  */
+
+.footer-bottom {
+    background-color: black;
+}
+
+.footer-bottom .copyright {
+    color: gray;
+    font-weight: 400;
+}
+
+.footer-bottom .copyright a {
+    color: gray;
+    text-decoration: none;
+}
+
+.footer-bottom .copyright a:hover {
+    color: var(--primary);
+    text-decoration: underline;
 }
 
 
@@ -82,18 +133,18 @@ body {
     padding: 0.8375rem 4.375rem 0.8375rem 1.25rem;
     font-weight: 700;
     margin: 0;
-    border: 0.1rem solid white;
-    background-color: white;
+    border: 0.1rem solid var(--white);
+    background-color: var(--white);
     display: block;
 }
 
 .btn-rounded:hover {
-    background-color: #1FA67A;
+    background-color: var(--primary);
 }
 
 #phone span {
     position: absolute;
-    background-color: #1FA67A;
+    background-color: var(--primary);
     width: 2.5rem;
     height: 2.5rem;
     top: 64%;
@@ -103,10 +154,76 @@ body {
 }
 
 #phone span i {
-    color: rgb(255, 255, 255);
+    color: var(--white);
     font-size: 1rem;
     line-height: 2.5rem;
 }
+
+#pengumuman i {
+    padding: 10px;
+    /* color: var(--primary); */
+}
+
+#pengumuman a {
+    text-decoration: none;
+    color: black;
+    line-height: 0;
+}
+
+#pengumuman a:hover {
+    color: var(--primary);
+}
+
+#pengumuman .row .col h4 {
+    border-style: solid;
+    border-width: 0px 0px 3px 0px;
+    border-color: var(--primary);
+}
+
+
+/* DROPDOWN */
+
+
+/* ============ desktop view ============ */
+
+@media all and (min-width: 992px) {
+    .dropdown-menu li {
+        position: relative;
+    }
+    .dropdown-menu .submenu {
+        display: none;
+        position: absolute;
+        left: 100%;
+        top: -7px;
+    }
+    .dropdown-menu .submenu-left {
+        right: 100%;
+        left: auto;
+    }
+    .dropdown-menu>li:hover {
+        background-color: #f1f1f1
+    }
+    .dropdown-menu>li:hover>.submenu {
+        display: block;
+    }
+}
+
+
+/* ============ desktop view .end// ============ */
+
+
+/* ============ small devices ============ */
+
+@media (max-width: 991px) {
+    .dropdown-menu .dropdown-menu {
+        margin-left: 0.7rem;
+        margin-right: 0.7rem;
+        margin-bottom: .5rem;
+    }
+}
+
+
+/* ============ small devices .end// ============ */
 
 
 /* Desktop */
@@ -116,7 +233,7 @@ body {
         text-transform: uppercase;
         margin-right: 30px;
     }
-    .nav-link:hover::after {
+    /* .nav-link:hover::after {
         content: '';
         display: block;
         border-bottom: 3px solid #ffffff;
@@ -124,12 +241,16 @@ body {
         margin: auto;
         padding-bottom: 5px;
         margin-bottom: -8px;
-    }
+    } */
+    /* FOOTER */
     .contact-box .icon {
         width: 4rem;
     }
     .contact-box .info .title {
         font-size: 1.4rem;
+    }
+    .contact-box .info .subtitle {
+        font-size: 1rem;
     }
 }
 
